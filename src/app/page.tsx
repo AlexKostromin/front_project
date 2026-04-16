@@ -1,66 +1,66 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { Reveal } from "@/shared/ui";
+import { Footer } from "@/widgets/footer/ui/Footer";
+import { Header } from "@/widgets/header/ui/Header";
+import { About } from "@/widgets/landing/about/ui/About";
+import { Benefits } from "@/widgets/landing/benefits/ui/Benefits";
+import { BlogTeaser } from "@/widgets/landing/blog/ui/BlogTeaser";
+import { Cases } from "@/widgets/landing/cases/ui/Cases";
+import { Comparison } from "@/widgets/landing/comparison/ui/Comparison";
+import { Compliance } from "@/widgets/landing/compliance/ui/Compliance";
+import { FinalCta } from "@/widgets/landing/cta/ui/FinalCta";
+import { Faq } from "@/widgets/landing/faq/ui/Faq";
+import { Hero } from "@/widgets/landing/hero/ui/Hero";
+import { HowItWorks } from "@/widgets/landing/how-it-works/ui/HowItWorks";
+import { Newsletter } from "@/widgets/landing/newsletter/ui/Newsletter";
+import { Press } from "@/widgets/landing/press/ui/Press";
+import { Solutions } from "@/widgets/landing/solutions/ui/Solutions";
+import { StickyCta } from "@/widgets/sticky-cta/ui/StickyCta";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <Reveal>
+          <Solutions />
+        </Reveal>
+        <Reveal>
+          <HowItWorks />
+        </Reveal>
+        <Reveal>
+          <Benefits />
+        </Reveal>
+        <Reveal>
+          <Compliance />
+        </Reveal>
+        <Reveal>
+          <Cases />
+        </Reveal>
+        <Reveal>
+          <Press />
+        </Reveal>
+        <Reveal>
+          <About />
+        </Reveal>
+        <Reveal>
+          <Comparison />
+        </Reveal>
+        <Reveal>
+          <Faq />
+        </Reveal>
+        <Reveal>
+          <FinalCta />
+        </Reveal>
+        <Reveal>
+          <BlogTeaser />
+        </Reveal>
+        <Reveal>
+          <Newsletter />
+        </Reveal>
       </main>
-    </div>
+      <Footer />
+      <StickyCta />
+    </>
   );
 }
