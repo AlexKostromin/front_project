@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import { Col, Flex, Row, Typography } from "antd";
+import { Col, Flex, Row } from "antd";
 import { team } from "@/shared/content/team";
 import { PageShell, Section, SectionHeading } from "@/shared/ui";
-
-const { Paragraph, Text, Title } = Typography;
 
 export const metadata: Metadata = {
   title: "О компании",
@@ -42,11 +40,11 @@ export default function AboutPage() {
           >
             Юристы и инженеры, перестраивающие профессию изнутри
           </h1>
-          <Paragraph style={{ marginTop: 24, fontSize: 18, opacity: 0.78, maxWidth: 640 }}>
+          <p style={{ marginTop: 24, fontSize: 18, opacity: 0.78, maxWidth: 640 }}>
             Inspire создан практикующими юристами в партнёрстве с инженерами, у которых за плечами
             поисковые системы и LLM-инфраструктура. Мы калибруем продукт на реальных делах и
             работаем с обратной связью команд, которые им пользуются каждый день.
-          </Paragraph>
+          </p>
         </header>
 
         <SectionHeading
@@ -88,18 +86,14 @@ export default function AboutPage() {
                   {member.initials}
                 </div>
                 <div>
-                  <Title level={3} style={{ margin: 0, fontSize: 18, fontWeight: 600 }}>
-                    {member.name}
-                  </Title>
-                  <Text
+                  <h3 style={{ margin: 0, fontSize: 18, fontWeight: 600 }}>{member.name}</h3>
+                  <span
                     style={{ display: "block", marginTop: 4, fontSize: 13, color: "var(--accent)" }}
                   >
                     {member.role}
-                  </Text>
+                  </span>
                 </div>
-                <Paragraph style={{ margin: 0, fontSize: 14, opacity: 0.72 }}>
-                  {member.bio}
-                </Paragraph>
+                <p style={{ margin: 0, fontSize: 14, opacity: 0.72 }}>{member.bio}</p>
               </Flex>
             </Col>
           ))}
